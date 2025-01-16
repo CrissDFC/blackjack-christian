@@ -1,0 +1,20 @@
+/**
+ *
+ * Esta función crea las imagenes de las cartas en el HTML
+ * @param {String} carta
+ * @returns {HTMLImageElement} imagen de retorno
+ */
+
+
+export const crearCartaHTML = (carta) => {
+
+    if ( !carta ) throw new Error('Carta es un documento obligatorio');
+
+    // <img class="carta" src="assets/cartas/2C.png">
+    const imgCarta = document.createElement('img');
+    imgCarta.src = `assets/cartas/${ carta }.png`; //3H, JD
+    imgCarta.classList.add('carta');
+
+    return imgCarta;
+}
+
